@@ -1,12 +1,19 @@
 import React from "react";
-import SearchIcon from '@mui/icons-material/Search';
-import LanguageIcon from '@mui/icons-material/Language';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Avatar from '@mui/material/Avatar';
-import './Header.css' 
-
+import { useDispatch } from "react-redux";
+import SearchIcon from "@mui/icons-material/Search";
+import LanguageIcon from "@mui/icons-material/Language";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Avatar from "@mui/material/Avatar";
+import { openModal } from "../../actions/modalAction";
+import Login from '../Login'
+import "./Header.css";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const openModalHandle = () => {
+    dispatch(openModal("open", <Login />));
+  };
   return (
     <div className="header">
       <img
@@ -15,16 +22,17 @@ const Header = () => {
         alt="logo"
       />
       <div className="header_center">
-        <input type='text' />
+        <input type="text" />
         <SearchIcon />
-        </div>
-        <div className="header_right">
+      </div>
+      <div className="header_right">
         <p>Become a host</p>
         <LanguageIcon />
         <ExpandMoreIcon />
+        <span onClick={openModalHandle}>Login</span>
         <Avatar />
       </div>
-      </div>
+    </div>
   );
 };
 

@@ -39,14 +39,17 @@
   ],
   "listings": [
     {
-      "id": "1",
+      "id": 2,
+      "img": "https://media.nomadicmatt.com/2019/airbnb_breakup4.jpg",
+      "title":"Penthouse in London",
+      "description":"Enjoy the amazing sights of London with this stunning penthouse.",
       "bath_num": 3,
       "bed_num": 4,
       "zip": 23456,
       "address": "Joe Molefe Street",
       "city": "Tembisa",
       "street": "Vincent Mazibuko",
-      "price": 2000,
+      "price": "R1899/night",
       "sq_ft": 4.2,
       "email": "test@test.com",
       "userId": 2
